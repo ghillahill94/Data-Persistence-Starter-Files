@@ -694,6 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46553683ff50c740904bfec5905adf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userInputField: {fileID: 2085662874}
 --- !u!4 &999957562
 Transform:
   m_ObjectHideFlags: 0

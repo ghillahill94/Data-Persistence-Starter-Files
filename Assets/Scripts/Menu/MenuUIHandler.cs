@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 [DefaultExecutionOrder(1000)]
 public class MenuUIHandler : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,16 @@ public class MenuUIHandler : MonoBehaviour
 
     public void StartGame() {
         // Load the scene with the index 1
-        SceneManager.LoadScene(1);
+        if (GameManager.Instance != null) {
+            string playerName = GameManager.Instance.GetPlayerName();
+
+            if (!string.IsNullOrEmpty(playerName)) {
+                SceneManager.LoadScene(1);
+            }
+            else {
+                Debug.Log("Please enter a name!");
+            }
+
+        }
     }
 }
